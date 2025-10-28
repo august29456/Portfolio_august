@@ -1,0 +1,121 @@
+/*---------------------- about page grid ----------------------*/
+.about-columns {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 10rem;
+  align-items: start;
+}
+
+.about-left h2 {
+  font-size: 1.75rem; /* ~28pixels */
+  font-weight: 600;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.about-right {
+  margin-top: 5rem; 
+}
+/* Font size for h3 on the right column */
+.about-right h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Font size for paragraph on the right column */
+.about-right p {
+  font-size: 1.125rem; /* ~18pixels */
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 48rem) {
+  .about-columns {
+    grid-template-columns: 1fr; /* Stack vertically */
+    gap: 2rem;
+  }
+
+  .about-right {
+    margin-top: 2rem; /* Less top space for smaller screens */
+  }
+
+  .about-left {
+    text-align: center;
+  }
+
+  .about-left img.profile-pic {
+    max-width: 80%;
+    height: auto;
+  }
+}
+
+/*-------------------------------------------------------------*/
+
+/*---------------------- case-study page grid ----------------------*/
+
+.project-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/*-------------------------------------------------------------*/
+
+/*---------------------- get in touch grid ----------------------*/
+.contact-form {
+  max-width: 50rem;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.contact-form button {
+  display: block;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.two-columns {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.full-width {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 48rem) {
+  .two-columns {
+    grid-template-columns: 1fr; /* stack into one column */
+  }
+}
+
+/*-------------------------------------------------------------*/
+
+/*---------------------- footer grid --------------------------*/
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  /* max-width: 1200pixels; */
+  margin: 0 auto;
+}
+
+/* On larger screens: 3 columns */
+@media (min-width: 48rem) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*-------------------------------------------------------------*/
+

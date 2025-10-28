@@ -1,0 +1,188 @@
+
+/*-------------------------------- Navigation --------------------------------*/
+.navbar {
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* wrap into smaller screens */
+  gap: 1rem;
+}
+
+/* Logo */
+#logo {
+  font-size: 1.3rem;
+  line-height: 2;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation List */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Navigation Links */
+.nav-list a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+/* Add ( ) on hover using pseudo-elements */
+.nav-list a::before,
+.nav-list a::after {
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-weight: bold;
+  position: absolute;
+}
+
+.nav-list a::before {
+  content: "(";
+  left: -1.2rem;
+}
+
+.nav-list a::after {
+  content: ")";
+  right: -1.2rem;
+}
+
+.nav-list a:hover {
+  color: green;
+}
+
+.nav-list a:hover::before,
+.nav-list a:hover::after {
+  opacity: 1;
+}
+
+/* Navigation Link for STYLE GUIDE */
+.nav {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.nav::before,
+.nav::after {
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-weight: bold;
+  position: absolute;
+}
+
+.nav::before {
+  content: "(";
+  left: -1.2rem;
+}
+
+.nav::after {
+  content: ")";
+  right: -1.2rem;
+}
+
+.nav:hover {
+  color: green;
+}
+
+.nav:hover::before,
+.nav:hover::after {
+  opacity: 1;
+}
+
+.button-secondary {
+  background: none;
+  border: none;
+  color: #333;
+  text-decoration: underline;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease, font-weight 0.5s ease;
+}
+
+.button-secondary:hover {
+  color: black; 
+  font-weight: 700; /* Makes it bold on hover */
+}
+
+
+
+/* Responsive Layout for Mobile */
+@media (max-width: 48rem) {
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #logo {
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/*----------------------------------------------------------------------*/
+
+
+/*----------------------        burger menu icon        ------------------------------*/
+
+/* default menu when it is desktop size */
+#menu-toggle {
+  display: none;
+}
+
+/* Burger icon style */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Show burger icon on mobile */
+@media (max-width: 48rem) {
+  .menu-icon {
+    display: block;
+    font-size: 2rem;
+    margin-left: auto;
+  }
+
+  /* Hide nav list by default */
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Show nav list if checkbox is checked */
+  #menu-toggle:checked + .menu-icon + .nav-list {
+    display: flex;
+  }
+}
+/*----------------------------------------------------------------------*/

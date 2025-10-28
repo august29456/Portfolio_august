@@ -1,0 +1,39 @@
+/* get in touch */
+
+input, textarea {
+  padding: 0.75rem;
+  border: 0.09375rem dotted #000; 
+  border-radius: 0.5rem; 
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  border-style: solid;
+  border-color: #000; 
+  background-color: #ffffff;
+  outline: none;     
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  display: block;
+}
+/*----------------------------------------------------------------------*/
+
+.form-wrapper {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 30rem) {
+  .form-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

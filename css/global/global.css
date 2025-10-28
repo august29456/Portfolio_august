@@ -1,0 +1,60 @@
+/*-------------------------------- TEXT decoration --------------------------------*/
+body {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: #3F3F46;
+  margin: 0;
+  background-color: #FAFAFA;
+}
+
+p {
+  font-size: 1.15rem;
+  /* max-width: 50rem; */
+  width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: "DM Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+}
+
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+a {
+  text-decoration: none;
+  background-color: none;
+  color: inherit;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/*-------------------------------- Universal Selector --------------------------------*/
+*, *::before, *::after { 
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 6.25rem;
+}
+
+/*---------------------------------- animation for name on the home page -----------------------------------------*/
+@keyframes greenAnimation {
+  0%, 100% {
+    color: inherit;
+  }
+
+  50% {
+    color: green;
+  } 
+}
+/*looping the green animation*/
+.h1-homepage {
+  animation: greenAnimation 2s ease-in-out infinite; 
+}
+
+/*-------------------------------------------------------------------------------*/
